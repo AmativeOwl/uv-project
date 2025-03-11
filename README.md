@@ -8,7 +8,7 @@ This was created with the [OpenUV.io](https://www.openuv.io/) API.
 [Important Notes](#notes) <br>
 [Tech Stack](#tech-stack) <br>
 [Prerequisites](#prerequisites) <br>
-[Installation](#installation)
+[Installation](#installation) <br>
 [Usage](#usage)
 
 ## Important Notes <a id="notes"></a>
