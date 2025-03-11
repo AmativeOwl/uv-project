@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="/styles/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>UV Tracker</h1>
+        <div class="uv-info">
+            <% if (locals.content) { %>
+                <h2>UV: <%= content.result.uv%> </h2>
+                <% if (content.result.uv >= 0 && content.result.uv <= 2) { %>
+                    <h2>UV Classification: Low </h2>
+                <% } else if (content.result.uv >= 3 && content.result.uv <= 5) { %> 
+                    <h2>UV Classification: Moderate </h2>
+                <% } else if (content.result.uv >= 6 && content.result.uv <= 7) { %>
+                    <h2>UV Classification: High </h2>
+                <% } else if (content.result.uv >= 8 && content.result.uv <= 10) { %> 
+                    <h2>UV Classification: Very High </h2>
+                <% } else if (content.result.uv >= 11) { %>
+                    <h2>UV Classification: Extreme </h2>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+
+    <form id="reminders">
+        <p>To protect your skin, consider signing up to our emails that will send notifications if the UV index is too high: </p>
+        <input style="width: 40%" class="email" type="text" name="email">
+        <button style="width: 15%" type="submit">Remind me!</button>
+    </form>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" charset="UTF-8"></script>
+</body>
+</html>

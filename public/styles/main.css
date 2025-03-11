@@ -1,0 +1,22 @@
+body {
+    color: white;
+    font-family: 'Sour Gummy', serif; 
+    display: flex; 
+    flex-flow: column wrap; 
+    align-items: center;
+    background-image: url("https://i.pinimg.com/originals/6a/27/b7/6a27b74d92cf188477455af803ff65e2.gif");
+    background-size: cover;
+}
+
+form {
+    display: flex; 
+    flex-flow: column wrap; 
+    align-items: center;
+    gap: 10px; 
+    font-size: 20px; 
+}
+
+form > button, form > input {
+    font-family: 'Sour Gummy', serif;
+    border-radius: 15%; 
+}
