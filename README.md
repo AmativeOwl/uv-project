@@ -19,14 +19,26 @@ The OpenUV.io API's free plan has a daily API quota that if exceeded, will cause
 **Backend**: Node.js, Express, Axios, jQuery, body-parser, EmailJS
 
 ## Prerequisites <a id="prerequisites"></a>
-#### 1. OpenUV.io API token <br>
+#### 1. Node.js and NPM
+To run the UV Tracker project locally and install necessary dependencies, you need to have Node.js and NPM installed on your machine.
+<ul>
+  <li>To install Node.js, visit [nodejs.org](https://nodejs.org/en) and download the latest LTS version for your operating system.</li>
+  <li>After installation, verify that it has been downloaded by running:</li>
+</ul>
+
+```bash
+node -v
+npm -v
+```
+
+#### 2. OpenUV.io API token <br>
 To access the OpenUV.io API and retrieve the UV index data, you need an API token.
 <ul>
   <li>Sign up at https://www.openuv.io/</li>
   <li>You can find your API token in the dashboard</li>
 </ul>
 
-#### 2. EmailJS Account
+#### 3. EmailJS Account
 To send emails when the UV index reaches a "high" level, you'll need an EmailJS account.
 <ul>
   <li>Sign up at https://dashboard.emailjs.com/sign-in</li>
