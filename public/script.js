@@ -2,7 +2,11 @@ let emails = [], emailSent = false, templateParams;
 let uvValue = $('.uv-info > h2').text();
 let time = new Date(); 
 
-emailjs.init(process.env.email_init);
+let email_init = ""; // Ctrl C + V your EmailJS API Public Key here 
+let email_service_id = ""; // Ctrl C + V your EmailJS service ID here
+let email_template_id = ""; // Ctrl C + V your EmailJS template ID here
+
+emailjs.init(email_init);
 
 $('#reminders > button').click(function(e) {
   e.preventDefault();
@@ -18,7 +22,7 @@ $('#reminders > button').click(function(e) {
         to_email: emailList
       };
       
-      emailjs.send(process.env.email_service_id, process.env.email_template_id, templateParams)
+      emailjs.send(email_service_id, email_template_id, templateParams)
       .then(function(response) {
         alert("Success! You will receive an email everytime the UV index is classified as High. Stay safe and protect yourself!");
         console.log('SUCCESS!', response.status, response.text);
