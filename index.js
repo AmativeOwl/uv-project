@@ -13,14 +13,14 @@ let emails = [];
 app.get("/", async (req, res) => {
     let currentDate = new Date(); 
     let isoDate = currentDate.toISOString(); 
-    // const result = await axios.get(`https://api.openuv.io/api/v1/uv?lat=-37.895978&lng=144.649419&alt=100&dt=${isoDate}`, {
-    //     headers: {
-    //         "x-access-token": "openuv-jbjirm7lbvzy1-io"
-    //     }
-    // })
+    const result = await axios.get(`https://api.openuv.io/api/v1/uv?lat=-37.895978&lng=144.649419&alt=100&dt=${isoDate}`, {
+        headers: {
+            "x-access-token": "openuv-jbjirm7lbvzy1-io"
+        }
+    })
 
     res.render('index.ejs'); 
-    // res.render("index.ejs", { content: result.data } ); 
+    res.render("index.ejs", { content: result.data } ); 
 })
 
 app.listen(port, (req, res) => {
