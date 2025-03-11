@@ -31,6 +31,9 @@ To send emails when the UV index reaches a "high" level, you'll need an EmailJS 
 <ul>
   <li>Sign up at https://dashboard.emailjs.com/sign-in</li>
   <li>Create a new email service and template under "Email Services" and "Email Templates" respectively</li>
+  <ul>
+    <li>The template can be a simple message e.g. The UV index is quite high today. Make sure to protect yourself! </li>
+  </ul>
   <li>Retrieve your Public Key under "Accounts", Service ID under "Email Services" and Template ID under "Email Templates"</li>
 </ul>
   
