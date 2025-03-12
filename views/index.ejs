@@ -11,20 +11,20 @@
 </head>
 <body>
     <div>
-        <h1>UV Tracker</h1>
+        <h1><u>UV Tracker</u></h1>
         <div class="uv-info">
             <% if (locals.content) { %>
-                <h2>UV: <%= content.result.uv%> </h2>
+                <h2 style="text-align: center;">UV: <%= content.result.uv%> </h2>
                 <% if (content.result.uv >= 0 && content.result.uv <= 2) { %>
-                    <h2>UV Classification: Low </h2>
+                    <h2 style="text-align: center;">UV Classification: Low </h2>
                 <% } else if (content.result.uv >= 3 && content.result.uv <= 5) { %> 
-                    <h2>UV Classification: Moderate </h2>
+                    <h2 style="text-align: center;">UV Classification: Moderate </h2>
                 <% } else if (content.result.uv >= 6 && content.result.uv <= 7) { %>
-                    <h2>UV Classification: High </h2>
+                    <h2 style="text-align: center;">UV Classification: High </h2>
                 <% } else if (content.result.uv >= 8 && content.result.uv <= 10) { %> 
-                    <h2>UV Classification: Very High </h2>
+                    <h2 style="text-align: center;">UV Classification: Very High </h2>
                 <% } else if (content.result.uv >= 11) { %>
-                    <h2>UV Classification: Extreme </h2>
+                    <h2 style="text-align: center;">UV Classification: Extreme </h2>
                 <% } %>
             <% } %>
         </div>
