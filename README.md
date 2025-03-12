@@ -22,7 +22,7 @@ The OpenUV.io API's free plan has a daily API quota that if exceeded, will cause
 #### 1. Node.js and NPM
 To run the UV Tracker project locally and install necessary dependencies, you need to have Node.js and NPM installed on your machine.
 <ul>
-  <li>To install Node.js, visit [nodejs.org](https://nodejs.org/en) and download the latest LTS version for your operating system.</li>
+  <li>To install Node.js, visit https://nodejs.org/en and download the latest LTS version for your operating system.</li>
   <li>After installation, verify that they has been downloaded by running:</li>
 </ul>
 
