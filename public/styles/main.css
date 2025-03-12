@@ -25,3 +25,8 @@ form > button, form > input {
     font-family: 'Sour Gummy', serif;
     border-radius: 15%; 
 }
+
+p {
+    text-align: center; 
+    width: 60%; 
+}
