@@ -2,9 +2,9 @@ let emails = [], emailSent = false, templateParams;
 let uvValue = $('.uv-info > h2').text();
 let time = new Date(); 
 
-let email_init = ""; // Ctrl C + V your EmailJS API Public Key here 
-let email_service_id = ""; // Ctrl C + V your EmailJS service ID here
-let email_template_id = ""; // Ctrl C + V your EmailJS template ID here
+let email_init = emailJsConfig.publicKey; // Ctrl C + V your EmailJS API Public Key here 
+let email_service_id = emailJsConfig.serviceId; // Ctrl C + V your EmailJS service ID here
+let email_template_id = emailJsConfig.templateId; // Ctrl C + V your EmailJS template ID here
 
 emailjs.init(email_init);
 

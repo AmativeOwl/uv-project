@@ -9,7 +9,10 @@ const app = express();
 const port = 3000; 
 
 app.use(express.static("public")); 
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set("view engine", "ejs");
 
 app.get("/", async (req, res) => {
     let currentDate = new Date(); 
@@ -22,7 +25,15 @@ app.get("/", async (req, res) => {
         }
     })
 
-    res.render("index.ejs", { content: result.data } ); 
+    res.render("index.ejs", {
+        content: result.data,
+        emailJs: {
+            publicKey: process.env.email_init || "",
+            serviceId: process.env.email_service_id || "",
+            templateId: process.env.email_template_id || ""
+        }
+    });
+ 
 })
 
 app.listen(port, (req, res) => {

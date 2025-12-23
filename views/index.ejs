@@ -36,6 +36,14 @@
         <button style="width: 15%" type="submit">Remind me!</button>
     </form>
 
+    <script id="emailJsConfig" type="application/json">
+        <%- JSON.stringify(emailJs || {
+            publicKey: "",
+            serviceId: "", 
+            templateId: ""
+        }) %>
+    </script>
+
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
