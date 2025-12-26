@@ -23,7 +23,7 @@ form {
 
 form > button, form > input {
     font-family: 'Sour Gummy', serif;
-    border-radius: 15%; 
+    border-radius: 5px; 
 }
 
 p {
