@@ -18,12 +18,6 @@ app.get("/", async (req, res) => {
     let currentDate = new Date(); 
     let isoDate = currentDate.toISOString(); 
     const token = process.env.token;
-
-    console.log('Environment variables check:');
-    console.log('token exists:', !!process.env.token);
-    console.log('email_init exists:', !!process.env.email_init);
-    console.log('email_service_id exists:', !!process.env.email_service_id);
-    console.log('email_template_id exists:', !!process.env.email_template_id);
     
     if (process.env.email_init) {
         console.log('email_init value (first 10 chars):', process.env.email_init.substring(0, 10) + '...');
