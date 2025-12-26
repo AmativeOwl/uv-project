@@ -17,8 +17,7 @@
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "emailjs": "^4.0.3",
-    "emailjs-com": "^3.2.0",
+    "emailjs": "^5.0.0",
     "express": "^4.21.2"
   }
 }
