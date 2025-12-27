@@ -23,6 +23,14 @@ app.get("/", async (req, res) => {
         console.log('email_init value (first 10 chars):', process.env.email_init.substring(0, 10) + '...');
     }
 
+    if (process.env.email_service_id) {
+        console.log('email_service value (first 10 chars):', process.env.email_service_id.substring(0, 10) + '...');
+    }
+
+    if (process.env.email_template_id) {
+        console.log('email_template value (first 10 chars):', process.env.email_template_id.substring(0, 10) + '...');
+    }
+
     const result = await axios.get(`https://api.openuv.io/api/v1/uv?lat=-37.895978&lng=144.649419&alt=100&dt=${isoDate}`, {
         headers: {
             "x-access-token": token 
