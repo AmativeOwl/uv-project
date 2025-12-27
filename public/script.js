@@ -1,3 +1,5 @@
+import emailjs from '@emailjs/browser';
+
 let emails = [], emailSent = false, templateParams;
 let uvValue = $('.uv-info > h2').text();
 let time = new Date(); 
